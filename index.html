@@ -1,91 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Pulse | Daily Intelligence</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Pulse — The Future of AI, Delivered Daily</title>
+  <meta name="description" content="Your daily intelligence briefing on AI breakthroughs, model releases, tools, and industry news. Automated and curated." />
+  <meta property="og:title" content="AI Pulse — The Future of AI, Delivered Daily" />
+  <meta property="og:description" content="Your daily intelligence briefing on AI breakthroughs, model releases, tools, and industry news." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#8b5cf6" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen">
-    <nav class="border-b border-slate-800 p-6">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
-            <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">AI PULSE</h1>
-            <div class="space-x-6 text-sm font-medium text-slate-400">
-                <a href="#" class="hover:text-white transition">Latest</a>
-                <a href="#" class="hover:text-white transition">Archive</a>
-                <a href="#" class="hover:text-white transition">About</a>
-            </div>
+<body>
+
+<canvas id="neural-canvas"></canvas>
+
+<!-- ══ SEARCH OVERLAY ══ -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-overlay-close" id="searchClose" aria-label="Close search">✕</button>
+  <input class="search-overlay-input" id="searchInput" type="text" placeholder="Search AI updates…" autocomplete="off" spellcheck="false" />
+  <p class="search-hint">↵ to open · ESC to close · ⌘K anywhere</p>
+  <div class="search-res" id="searchRes"></div>
+</div>
+
+<!-- ══ NAVIGATION ══ -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    AI PULSE
+    <sup>Intelligence Feed</sup>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#latest">Latest</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#about">About</a></li>
+  </ul>
+  <div class="nav-actions">
+    <span class="live-dot">LIVE</span>
+    <button class="btn-ghost open-search" aria-label="Open search">⌕ Search</button>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <p class="hero-eyebrow">Neural intelligence · Updated daily</p>
+  <h1 class="hero-title gradient-text">AI PULSE</h1>
+  <p class="hero-sub">Your daily briefing on AI breakthroughs, model releases, tools, and what's reshaping the world.</p>
+  <div class="hero-search">
+    <input type="text" id="heroSearchInput" placeholder="Search 100+ AI updates…" autocomplete="off"
+      onfocus="document.getElementById('searchOverlay').classList.add('open'); document.getElementById('searchInput').focus(); this.blur()" readonly />
+    <button onclick="document.getElementById('searchOverlay').classList.add('open'); document.getElementById('searchInput').focus()">
+      Search →
+    </button>
+  </div>
+  <div class="hero-stats">
+    <div>
+      <span class="stat-val" id="stat-posts">—</span>
+      <span class="stat-lbl">Updates</span>
+    </div>
+    <div>
+      <span class="stat-val" id="stat-models">—</span>
+      <span class="stat-lbl">Models</span>
+    </div>
+    <div>
+      <span class="stat-val" id="stat-tools">—</span>
+      <span class="stat-lbl">Tools</span>
+    </div>
+  </div>
+  <div class="scroll-cue">scroll</div>
+</section>
+
+<!-- ══ TICKER ══ -->
+<div class="ticker-wrap">
+  <div class="ticker-badge">LATEST</div>
+  <div class="ticker-track">
+    <div class="ticker-inner" id="tickerInner">
+      <span class="ticker-item">Loading latest AI intelligence…</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MAIN CONTENT ══ -->
+<div class="main-wrap" id="latest">
+
+  <div class="main-col">
+    <!-- Category filters -->
+    <div class="filters">
+      <button class="ftab active" data-cat="all">All</button>
+      <button class="ftab" data-cat="Models">Models</button>
+      <button class="ftab" data-cat="Tools">Tools</button>
+      <button class="ftab" data-cat="Research">Research</button>
+      <button class="ftab" data-cat="Industry">Industry</button>
+      <button class="ftab" data-cat="News">News</button>
+    </div>
+
+    <div class="sec-head" id="featuredHead">
+      <h2 class="sec-title">Featured</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="featured-grid" id="featuredGrid"></div>
+
+    <div class="sec-head" style="margin-top:2.5rem">
+      <h2 class="sec-title">All Updates</h2>
+      <div class="sec-line"></div>
+    </div>
+    <div class="posts-grid" id="postsGrid">
+      <div style="height:210px;border-radius:10px" class="skeleton"></div>
+      <div style="height:210px;border-radius:10px" class="skeleton"></div>
+      <div style="height:210px;border-radius:10px" class="skeleton"></div>
+      <div style="height:210px;border-radius:10px" class="skeleton"></div>
+    </div>
+    <button class="btn-load" id="loadMore" style="display:none">Load more updates</button>
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="side-col" id="tools">
+    <div class="side-box">
+      <h3 class="side-title">AI Tools</h3>
+      <div id="affTools">
+        <div style="height:58px;border-radius:8px;margin-bottom:.6rem" class="skeleton"></div>
+        <div style="height:58px;border-radius:8px;margin-bottom:.6rem" class="skeleton"></div>
+        <div style="height:58px;border-radius:8px" class="skeleton"></div>
+      </div>
+    </div>
+    <div class="side-box">
+      <h3 class="side-title">Learn AI</h3>
+      <div id="affLearn">
+        <div style="height:58px;border-radius:8px;margin-bottom:.6rem" class="skeleton"></div>
+        <div style="height:58px;border-radius:8px" class="skeleton"></div>
+      </div>
+    </div>
+    <div class="side-box" id="research">
+      <h3 class="side-title">Categories</h3>
+      <ul class="cat-list">
+        <li class="cat-li" onclick="setCategory('Models')"><span>Models</span><span class="cat-cnt" id="count-models">0</span></li>
+        <li class="cat-li" onclick="setCategory('Tools')"><span>Tools</span><span class="cat-cnt" id="count-tools">0</span></li>
+        <li class="cat-li" onclick="setCategory('Research')"><span>Research</span><span class="cat-cnt" id="count-research">0</span></li>
+        <li class="cat-li" onclick="setCategory('Industry')"><span>Industry</span><span class="cat-cnt" id="count-industry">0</span></li>
+        <li class="cat-li" onclick="setCategory('News')"><span>News</span><span class="cat-cnt" id="count-news">0</span></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="foot-wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <span class="nav-logo" style="display:inline-flex">AI PULSE</span>
         </div>
-    </nav>
+        <p class="foot-desc">Your daily intelligence feed for artificial intelligence breakthroughs, model releases, research papers, and industry movements. Automated and curated by AI — because the future doesn't wait.</p>
+        <p style="font-size:.7rem;color:var(--text-3);margin-top:.875rem;font-family:var(--ff-mono)">* This site contains affiliate links. We may earn a commission at no cost to you.</p>
+      </div>
+      <div>
+        <p class="foot-h">Explore</p>
+        <ul class="foot-links">
+          <li><a href="#latest" onclick="setCategory('all')">All Updates</a></li>
+          <li><a href="#latest" onclick="setCategory('Models')">Model Releases</a></li>
+          <li><a href="#latest" onclick="setCategory('Tools')">AI Tools</a></li>
+          <li><a href="#latest" onclick="setCategory('Research')">Research</a></li>
+          <li><a href="#latest" onclick="setCategory('Industry')">Industry News</a></li>
+        </ul>
+      </div>
+      <div id="about">
+        <p class="foot-h">About</p>
+        <ul class="foot-links">
+          <li><a href="#">About AI Pulse</a></li>
+          <li><a href="#">Affiliate Disclosure</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2025–2026 AI Pulse · Automated AI Intelligence</span>
+      <span>Built for the future ◆ Updated daily</span>
+    </div>
+  </div>
+</footer>
 
-    <main class="max-w-3xl mx-auto py-20 px-6">
-        <header class="mb-16">
-            <p class="text-emerald-400 font-semibold mb-2 tracking-widest text-xs uppercase">Daily Update • April 17, 2026</p>
-            <h2 class="text-5xl font-bold mb-6 leading-tight">The Future of Intelligence, Delivered Daily.</h2>
-            <p class="text-slate-400 text-lg leading-relaxed">We scour the web using autonomous agents to find the most impactful AI tools and news so you don't have to.</p>
-        </header>
-
-        <section class="space-y-12">
-            
-            <article class="group">
-                <h3 class="text-2xl font-semibold mb-3 group-hover:text-blue-400 transition cursor-pointer">The latest AI news we announced in March 2026 - Google Blog</h3>
-                <p class="text-slate-400 leading-relaxed mb-4">Here's a recap of our biggest AI updates from March 2026, including an expansion of Search Live, more ways to access Personal Intelligence ...</p>
-                <a href="https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-march-2026/" target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
-                    Read Source 
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </article>
-            <hr class="border-slate-800">
-            
-            <article class="group">
-                <h3 class="text-2xl font-semibold mb-3 group-hover:text-blue-400 transition cursor-pointer">Latest AI News, Developments, and Breakthroughs | 2026</h3>
-                <p class="text-slate-400 leading-relaxed mb-4">Wondering what's happening in the AI world? Here are the latest AI breakthroughs and news that are shaping the world around us!</p>
-                <a href="https://www.crescendo.ai/news/latest-ai-news-and-updates" target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
-                    Read Source 
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </article>
-            <hr class="border-slate-800">
-            
-            <article class="group">
-                <h3 class="text-2xl font-semibold mb-3 group-hover:text-blue-400 transition cursor-pointer">AI News: A Huge Week for AI Apps (Anthropic, OpenAI, Google)</h3>
-                <p class="text-slate-400 leading-relaxed mb-4">Statistically, there's always going to be someone that sees a new video uploaded 8 seconds ago, no views. And today it's my turn! YAY!</p>
-                <a href="https://www.youtube.com/watch?v=bIrzOQtnp8w" target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
-                    Read Source 
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </article>
-            <hr class="border-slate-800">
-            
-            <article class="group">
-                <h3 class="text-2xl font-semibold mb-3 group-hover:text-blue-400 transition cursor-pointer">AI News | Latest News | Insights Powering AI-Driven Business Growth</h3>
-                <p class="text-slate-400 leading-relaxed mb-4">AI in Action. April 16, 2026. Cadence expands AI and robotic partnerships with Nvidia, Google Cloud · Governance, Regulation & Policy. April 15, 2026. Commvault ...</p>
-                <a href="https://www.artificialintelligence-news.com/" target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
-                    Read Source 
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </article>
-            <hr class="border-slate-800">
-            
-            <article class="group">
-                <h3 class="text-2xl font-semibold mb-3 group-hover:text-blue-400 transition cursor-pointer">Top 10 Best AI Tools for 2026 (Updated March) - DataNorth AI</h3>
-                <p class="text-slate-400 leading-relaxed mb-4">We analyse the Top 10 Best AI Tools for 2026 (Updated March) for coding, reasoning, and research. Compare features, pricing, and strategies.</p>
-                <a href="https://datanorth.ai/blog/top-10-ai-tools-for-2026" target="_blank" class="inline-flex items-center text-sm font-semibold text-blue-400 hover:text-blue-300">
-                    Read Source 
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                </a>
-            </article>
-            <hr class="border-slate-800">
-            
-        </section>
-
-        <footer class="mt-20 pt-10 border-t border-slate-800 text-center text-slate-500 text-sm">
-            <p>&copy; 2026 AI Pulse. Powered by OpenClaw Automation.</p>
-        </footer>
-    </main>
+<script src="assets/js/app.js"></script>
 </body>
 </html>

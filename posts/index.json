@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "slug": "2025-07-15-vibe-coding-revolution",
+      "title": "Vibe Coding: How AI Rewired the Way We Write Software",
+      "date": "2025-07-15",
+      "category": "Tools",
+      "tags": ["Cursor", "Claude Code", "AI Coding", "Dev Tools"],
+      "excerpt": "From Cursor to Claude Code to GitHub Copilot — the craft of software development fundamentally changed in 2025. Here's what vibe coding really means and where it's heading.",
+      "readTime": "6 min",
+      "featured": true
+    },
+    {
+      "slug": "2025-06-10-claude-4-anthropic",
+      "title": "Claude 4 Unveiled: Anthropic's Most Powerful Model Family",
+      "date": "2025-06-10",
+      "category": "Models",
+      "tags": ["Anthropic", "Claude 4", "Opus 4", "LLM"],
+      "excerpt": "Anthropic launches Claude 4 with Opus 4, Sonnet 4, and Haiku 4 — pushing the frontier of reasoning, coding, and multimodal capabilities to new heights.",
+      "readTime": "5 min",
+      "featured": true
+    },
+    {
+      "slug": "2025-05-20-openai-o3-reasoning",
+      "title": "OpenAI's o3: The Reasoning Model That Changes Everything",
+      "date": "2025-05-20",
+      "category": "Models",
+      "tags": ["OpenAI", "o3", "Reasoning", "AGI"],
+      "excerpt": "OpenAI's o3 achieves near-human performance on scientific and math benchmarks, making the AI safety community rethink timelines — and raising urgent questions about what comes next.",
+      "readTime": "5 min",
+      "featured": true
+    },
+    {
+      "slug": "2025-04-08-gemini-2-ultra",
+      "title": "Gemini 2.0 Ultra: Google's Multimodal Masterstroke",
+      "date": "2025-04-08",
+      "category": "Models",
+      "tags": ["Google", "Gemini 2.0", "Multimodal", "AI"],
+      "excerpt": "Google's Gemini 2.0 Ultra brings native audio, video, and code understanding together in a single frontier model, challenging every benchmark GPT-4o and Claude hold.",
+      "readTime": "4 min",
+      "featured": false
+    },
+    {
+      "slug": "2025-03-14-meta-llama-4",
+      "title": "Meta Releases Llama 4: Open Source Reaches the Frontier",
+      "date": "2025-03-14",
+      "category": "Models",
+      "tags": ["Meta", "Llama 4", "Open Source", "LLM"],
+      "excerpt": "Meta's Llama 4 family brings open-weight models to frontier performance levels, reshaping what's possible for developers building on local and self-hosted AI.",
+      "readTime": "4 min",
+      "featured": false
+    },
+    {
+      "slug": "2025-01-20-deepseek-disrupts-ai",
+      "title": "DeepSeek R1: The Chinese AI That Shocked Silicon Valley",
+      "date": "2025-01-20",
+      "category": "Models",
+      "tags": ["DeepSeek", "R1", "Open Source", "Reasoning"],
+      "excerpt": "DeepSeek's R1 model matched GPT-4 performance at a fraction of the cost, triggering a rethink of AI economics and a historic stock market selloff.",
+      "readTime": "5 min",
+      "featured": false
+    }
+  ]
+}
