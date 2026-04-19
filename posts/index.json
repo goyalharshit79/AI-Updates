@@ -1,6 +1,16 @@
 {
   "posts": [
     {
+      "slug": "2026-04-19-gpt5-vs-glm5",
+      "title": "GPT-5.4 vs. GLM-5.1: The Battle for Coding Supremacy",
+      "date": "2026-04-19",
+      "category": "Models",
+      "tags": ["OpenAI", "Zhipu AI", "Coding", "Open Source", "GPT-5.4"],
+      "excerpt": "OpenAI's latest GPT-5.4 release faces an unexpected challenger: Zhipu AI's GLM-5.1, which has officially overtaken it in key coding benchmarks.",
+      "readTime": "5 min",
+      "featured": true
+    },
+    {
       "slug": "2026-04-12-claude-mythos-launch",
       "title": "Claude Mythos: Anthropic’s Most Powerful Model (With a Catch)",
       "date": "2026-04-12",
@@ -28,7 +38,7 @@
       "tags": ["AI Trends", "Meta", "Google", "Open Source", "Market Update"],
       "excerpt": "March 2026 went down in history as the month that changed AI forever, with a record-breaking 12 model releases in a single week.",
       "readTime": "4 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2025-07-15-vibe-coding-revolution",
