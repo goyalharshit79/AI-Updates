@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading… — AI Pulse</title>
+  <meta name="description" content="" />
+  <meta name="theme-color" content="#8b5cf6" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<canvas id="neural-canvas"></canvas>
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ══ NAVIGATION ══ -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    AI PULSE
+    <sup>Intelligence Feed</sup>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#latest">Latest</a></li>
+    <li><a href="index.html#tools">Tools</a></li>
+    <li><a href="index.html#research">Research</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="index.html" class="btn-ghost">← All Posts</a>
+  </div>
+</nav>
+
+<!-- ══ POST HERO ══ -->
+<div class="post-hero" id="postHero">
+  <div class="skeleton" style="width:120px;height:26px;border-radius:999px;margin:0 auto 1.5rem"></div>
+  <div class="skeleton" style="width:72%;height:3.2rem;border-radius:8px;margin:0 auto 1rem"></div>
+  <div class="skeleton" style="width:72%;height:2rem;border-radius:8px;margin:0 auto 1.5rem"></div>
+  <div class="skeleton" style="width:38%;height:1rem;border-radius:4px;margin:0 auto"></div>
+</div>
+
+<!-- ══ POST BODY ══ -->
+<div class="post-layout">
+  <article class="post-content" id="postContent">
+    <div class="skeleton" style="height:1rem;border-radius:4px;margin-bottom:.85rem"></div>
+    <div class="skeleton" style="height:1rem;border-radius:4px;margin-bottom:.85rem;width:92%"></div>
+    <div class="skeleton" style="height:1rem;border-radius:4px;margin-bottom:.85rem;width:97%"></div>
+    <div class="skeleton" style="height:1rem;border-radius:4px;margin-bottom:.85rem;width:78%"></div>
+    <div class="skeleton" style="height:1rem;border-radius:4px;margin-bottom:.85rem"></div>
+    <div class="skeleton" style="height:1rem;border-radius:4px;margin-bottom:.85rem;width:88%"></div>
+  </article>
+  <aside class="post-side">
+    <div class="toc-box" id="tocBox">
+      <p class="toc-title">On this page</p>
+      <ul class="toc-list" id="tocList"></ul>
+    </div>
+  </aside>
+</div>
+
+<!-- ══ RELATED POSTS ══ -->
+<div class="related-section" id="relatedSection" style="display:none">
+  <div class="sec-head">
+    <h2 class="sec-title">Related Updates</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="related-grid" id="relatedGrid"></div>
+</div>
+
+<footer>
+  <div class="foot-wrap">
+    <div class="foot-bottom">
+      <span>© 2025–2026 AI Pulse · Automated AI Intelligence</span>
+      <a href="index.html" class="btn-ghost" style="font-size:.74rem">← Back to all posts</a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="assets/js/post.js"></script>
+</body>
+</html>

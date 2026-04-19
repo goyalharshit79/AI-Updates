@@ -1,0 +1,76 @@
+{
+  "affiliates": [
+    {
+      "id": "claude-pro",
+      "name": "Claude Pro",
+      "description": "Access Opus 4 & Sonnet 4 with higher limits",
+      "url": "PLACEHOLDER_CLAUDE_PRO_URL",
+      "icon": "🤖",
+      "bg": "rgba(139,92,246,0.15)",
+      "category": "Tools"
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor AI Editor",
+      "description": "The AI-first code editor. Try free.",
+      "url": "PLACEHOLDER_CURSOR_AFFILIATE_URL",
+      "icon": "⚡",
+      "bg": "rgba(34,211,238,0.12)",
+      "category": "Tools"
+    },
+    {
+      "id": "chatgpt-plus",
+      "name": "ChatGPT Plus",
+      "description": "GPT-4o + DALL-E + advanced reasoning",
+      "url": "PLACEHOLDER_CHATGPT_PLUS_URL",
+      "icon": "💬",
+      "bg": "rgba(16,185,129,0.12)",
+      "category": "Tools"
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "description": "State-of-the-art AI image generation",
+      "url": "PLACEHOLDER_MIDJOURNEY_URL",
+      "icon": "🎨",
+      "bg": "rgba(236,72,153,0.12)",
+      "category": "Tools"
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "description": "AI pair programmer for every IDE",
+      "url": "PLACEHOLDER_GITHUB_COPILOT_URL",
+      "icon": "🐙",
+      "bg": "rgba(34,211,238,0.12)",
+      "category": "Tools"
+    },
+    {
+      "id": "udemy-ai",
+      "name": "Udemy AI Courses",
+      "description": "Top-rated AI & ML courses — up to 90% off",
+      "url": "PLACEHOLDER_UDEMY_AFFILIATE_URL",
+      "icon": "🎓",
+      "bg": "rgba(245,158,11,0.12)",
+      "category": "Courses"
+    },
+    {
+      "id": "coursera-ai",
+      "name": "Coursera AI",
+      "description": "Certified AI specializations from top universities",
+      "url": "PLACEHOLDER_COURSERA_AFFILIATE_URL",
+      "icon": "🏛️",
+      "bg": "rgba(16,185,129,0.12)",
+      "category": "Courses"
+    },
+    {
+      "id": "amazon-ai-books",
+      "name": "Amazon AI Books",
+      "description": "Best AI, ML & LLM books with fast delivery",
+      "url": "PLACEHOLDER_AMAZON_ASSOCIATES_URL",
+      "icon": "📚",
+      "bg": "rgba(245,158,11,0.12)",
+      "category": "Courses"
+    }
+  ]
+}
