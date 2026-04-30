@@ -51,7 +51,11 @@ def gather_news(api_key: str) -> list[dict]:
     for url in NEWS_URLS:
         try:
             print(f"[firecrawl] scraping {url}")
-            response = app.scrape_url(url, formats=["markdown"])
+            # firecrawl-py v2 uses .scrape(), v0/v1 used .scrape_url()
+            if hasattr(app, "scrape"):
+                response = app.scrape(url, formats=["markdown"])
+            else:
+                response = app.scrape_url(url, formats=["markdown"])
 
             # firecrawl-py v0: response is a dict with "markdown" key
             # firecrawl-py v1: response is a ScrapeResponse object
