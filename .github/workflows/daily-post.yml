@@ -2,10 +2,10 @@ name: Daily AI News Post
 
 on:
   schedule:
-    # Runs every day at 7:00 AM UTC.
+    # Runs every day at 10:30 AM IST (05:00 UTC).
     # Change the time here: https://crontab.guru
     # Format: minute hour day-of-month month day-of-week
-    - cron: '0 7 * * *'
+    - cron: '0 5 * * *'
   workflow_dispatch:  # Allows manual trigger from the Actions tab
 
 jobs:
