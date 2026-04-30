@@ -1,0 +1,43 @@
+name: Daily AI News Post
+
+on:
+  schedule:
+    # Runs every day at 7:00 AM UTC.
+    # Change the time here: https://crontab.guru
+    # Format: minute hour day-of-month month day-of-week
+    - cron: '0 7 * * *'
+  workflow_dispatch:  # Allows manual trigger from the Actions tab
+
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # needed to push the new post back to main
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install firecrawl-py google-generativeai
+
+      - name: Generate daily post
+        env:
+          FIRECRAWL_API_KEY: ${{ secrets.FIRECRAWL_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/daily_post.py
+
+      - name: Commit and push new post
+        run: |
+          git config user.name "AI Pulse Bot"
+          git config user.email "bot@ai-pulse.dev"
+          git add posts/
+          # Only commit if something actually changed
+          git diff --staged --quiet && echo "Nothing to commit" || \
+            git commit -m "content: auto-post $(date -u +%Y-%m-%d)"
+          git push
