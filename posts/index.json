@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "slug": "2026-04-28-ai-agent-economy",
+      "title": "The Agent Economy: When AI Stops Answering and Starts Working",
+      "date": "2026-04-28",
+      "category": "Industry",
+      "tags": ["AI Agents", "OpenAI", "Anthropic", "Automation", "Future of Work"],
+      "excerpt": "2026 is the year AI agents stopped being demos. Real companies are now paying AI systems to complete multi-day tasks autonomously — and the economics are genuinely strange.",
+      "readTime": "6 min",
+      "featured": true
+    },
+    {
+      "slug": "2026-04-22-gemma-4-open-frontier",
+      "title": "Google's Gemma 4: Open Weights Finally Reach the Frontier",
+      "date": "2026-04-22",
+      "category": "Models",
+      "tags": ["Google", "Gemma 4", "Open Source", "Multimodal", "LLM"],
+      "excerpt": "Google has released Gemma 4, its most capable open-weights model yet — and for the first time, an open model from a major lab genuinely competes at the frontier.",
+      "readTime": "5 min",
+      "featured": true
+    },
+    {
       "slug": "2026-04-19-gpt5-vs-glm5",
       "title": "GPT-5.4 vs. GLM-5.1: The Battle for Coding Supremacy",
       "date": "2026-04-19",
@@ -18,7 +38,7 @@
       "tags": ["Anthropic", "Claude Mythos", "AI Models", "Proprietary AI"],
       "excerpt": "Anthropic has confirmed Claude Mythos, a model so powerful it is currently locked behind a 50-company firewall.",
       "readTime": "6 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-04-09-openclaw-rem-update",
@@ -26,9 +46,9 @@
       "date": "2026-04-09",
       "category": "Tools",
       "tags": ["OpenClaw", "AI Agents", "Open Source", "Security"],
-      "excerpt": "The latest OpenClaw release introduces 'Dreaming' capabilities with REM backfill and a significant security hardening overhaul.",
+      "excerpt": "The latest OpenClaw release introduces ‘Dreaming’ capabilities with REM backfill and a significant security hardening overhaul.",
       "readTime": "5 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-03-31-march-ai-surge",
