@@ -20,7 +20,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 from firecrawl import FirecrawlApp
 
 REPO_ROOT = Path(__file__).parent.parent
@@ -42,6 +43,13 @@ SEARCH_QUERIES = [
 # Step 1 — Gather raw news via Firecrawl
 # ---------------------------------------------------------------------------
 
+def _get(item, key: str, default: str = "") -> str:
+    """Get a field from either a dict or an object (firecrawl SDK v0 vs v1)."""
+    if isinstance(item, dict):
+        return item.get(key) or default
+    return getattr(item, key, None) or default
+
+
 def gather_news(api_key: str) -> list[dict]:
     app = FirecrawlApp(api_key=api_key)
     seen_urls = set()
@@ -50,9 +58,17 @@ def gather_news(api_key: str) -> list[dict]:
     for query in SEARCH_QUERIES:
         try:
             response = app.search(query, limit=5)
-            items = response.get("data", []) if isinstance(response, dict) else []
+            # firecrawl-py v0 returns {"data": [...]}
+            # firecrawl-py v1 returns a list or SearchResponse object directly
+            if isinstance(response, dict):
+                items = response.get("data", [])
+            elif isinstance(response, list):
+                items = response
+            else:
+                items = getattr(response, "data", []) or []
+
             for item in items:
-                url = item.get("url", "")
+                url = _get(item, "url")
                 if url and url not in seen_urls:
                     seen_urls.add(url)
                     results.append(item)
@@ -63,12 +79,12 @@ def gather_news(api_key: str) -> list[dict]:
     return results
 
 
-def format_news_for_prompt(items: list[dict]) -> str:
+def format_news_for_prompt(items: list) -> str:
     parts = []
     for i, item in enumerate(items[:12], 1):
-        title = item.get("title") or ""
-        url = item.get("url") or ""
-        body = item.get("markdown") or item.get("description") or ""
+        title = _get(item, "title")
+        url = _get(item, "url")
+        body = _get(item, "markdown") or _get(item, "description")
         parts.append(f"[{i}] {title}\n{url}\n{body[:1500]}")
     return "\n\n---\n\n".join(parts)
 
@@ -138,19 +154,20 @@ Rules:
 
 
 def generate_post(api_key: str, news_text: str, today: str) -> dict:
-    genai.configure(api_key=api_key)
-    model = genai.GenerativeModel(
-        model_name="gemini-2.0-flash",
-        system_instruction=SYSTEM_PROMPT,
-        generation_config=genai.GenerationConfig(
+    client = genai.Client(api_key=api_key)
+
+    user_message = f"Today's date: {today}\n\nNEWS SOURCES:\n\n{news_text}"
+
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents=user_message,
+        config=types.GenerateContentConfig(
+            system_instruction=SYSTEM_PROMPT,
             response_mime_type="application/json",
             temperature=0.4,
         ),
     )
 
-    user_message = f"Today's date: {today}\n\nNEWS SOURCES:\n\n{news_text}"
-
-    response = model.generate_content(user_message)
     raw = response.text.strip()
 
     # Strip accidental markdown fences just in case

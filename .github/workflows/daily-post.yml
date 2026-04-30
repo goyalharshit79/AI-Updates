@@ -24,7 +24,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install firecrawl-py google-generativeai
+        run: pip install firecrawl-py google-genai
 
       - name: Generate daily post
         env:
