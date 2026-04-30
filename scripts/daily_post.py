@@ -163,7 +163,7 @@ def generate_post(api_key: str, news_text: str, today: str) -> dict:
     user_message = f"Today's date: {today}\n\nNEWS SOURCES:\n\n{news_text}"
 
     response = client.models.generate_content(
-        model="gemini-2.0-flash",
+        model="gemini-2.5-flash",
         contents=user_message,
         config=types.GenerateContentConfig(
             system_instruction=SYSTEM_PROMPT,
