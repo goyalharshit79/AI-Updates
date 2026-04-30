@@ -30,62 +30,62 @@ INDEX_FILE = POSTS_DIR / "index.json"
 
 VALID_CATEGORIES = {"Models", "Tools", "Research", "Industry", "News"}
 
-SEARCH_QUERIES = [
-    "new AI model release today 2026",
-    "large language model benchmark announcement 2026",
-    "AI startup funding round 2026",
-    "AI regulation policy news 2026",
-    "open source AI model release 2026",
+# Pages to scrape for AI news. Firecrawl returns clean markdown from each.
+NEWS_URLS = [
+    "https://techcrunch.com/category/artificial-intelligence/",
+    "https://venturebeat.com/category/ai/",
+    "https://www.theverge.com/ai-artificial-intelligence",
+    "https://arstechnica.com/ai/",
+    "https://www.artificialintelligence-news.com/",
 ]
 
 
 # ---------------------------------------------------------------------------
-# Step 1 — Gather raw news via Firecrawl
+# Step 1 — Gather raw news via Firecrawl (scrape known pages)
 # ---------------------------------------------------------------------------
-
-def _get(item, key: str, default: str = "") -> str:
-    """Get a field from either a dict or an object (firecrawl SDK v0 vs v1)."""
-    if isinstance(item, dict):
-        return item.get(key) or default
-    return getattr(item, key, None) or default
-
 
 def gather_news(api_key: str) -> list[dict]:
     app = FirecrawlApp(api_key=api_key)
-    seen_urls = set()
     results = []
 
-    for query in SEARCH_QUERIES:
+    for url in NEWS_URLS:
         try:
-            response = app.search(query, limit=5)
-            # firecrawl-py v0 returns {"data": [...]}
-            # firecrawl-py v1 returns a list or SearchResponse object directly
+            print(f"[firecrawl] scraping {url}")
+            response = app.scrape_url(url, formats=["markdown"])
+
+            # firecrawl-py v0: response is a dict with "markdown" key
+            # firecrawl-py v1: response is a ScrapeResponse object
             if isinstance(response, dict):
-                items = response.get("data", [])
-            elif isinstance(response, list):
-                items = response
+                content = response.get("markdown") or response.get("content") or ""
+                page_url = response.get("metadata", {}).get("sourceURL", url)
+                title = response.get("metadata", {}).get("title", "")
             else:
-                items = getattr(response, "data", []) or []
+                content = getattr(response, "markdown", None) or ""
+                metadata = getattr(response, "metadata", None) or {}
+                page_url = getattr(metadata, "source_url", None) or url
+                title = getattr(metadata, "title", None) or ""
 
-            for item in items:
-                url = _get(item, "url")
-                if url and url not in seen_urls:
-                    seen_urls.add(url)
-                    results.append(item)
+            if content:
+                results.append({"url": page_url, "title": title, "markdown": content})
+                print(f"[firecrawl] got {len(content)} chars from {url}")
+            else:
+                print(f"[firecrawl] empty response from {url}")
+
         except Exception as exc:
-            print(f"[firecrawl] query '{query}' failed: {exc}", file=sys.stderr)
+            print(f"[firecrawl] failed to scrape {url}: {exc}")
 
-    print(f"[firecrawl] gathered {len(results)} unique items")
+    print(f"[firecrawl] scraped {len(results)} pages total")
     return results
 
 
 def format_news_for_prompt(items: list) -> str:
     parts = []
-    for i, item in enumerate(items[:12], 1):
-        title = _get(item, "title")
-        url = _get(item, "url")
-        body = _get(item, "markdown") or _get(item, "description")
-        parts.append(f"[{i}] {title}\n{url}\n{body[:1500]}")
+    for i, item in enumerate(items, 1):
+        title = item.get("title", "")
+        url = item.get("url", "")
+        # Trim each page to 3000 chars so the prompt stays manageable
+        body = (item.get("markdown") or "")[:3000]
+        parts.append(f"[Source {i}] {title}\n{url}\n\n{body}")
     return "\n\n---\n\n".join(parts)
 
 
