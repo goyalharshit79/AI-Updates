@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "slug": "2026-04-30-runpod-flash-ai-dev-tool",
+      "title": "RunPod Flash: A New Open-Source Tool for Faster AI Development",
+      "date": "2026-04-30",
+      "category": "Tools",
+      "tags": [
+        "RunPod",
+        "Open-Source",
+        "AI Development",
+        "Orchestration",
+        "Python"
+      ],
+      "excerpt": "RunPod has launched Flash, a new open-source Python tool designed to accelerate AI development by eliminating container overhead. It aims to streamline the AI-first cloud.",
+      "readTime": "2 min",
+      "featured": true
+    },
+    {
       "slug": "2026-04-29-openai-cloud-expansion",
       "title": "OpenAI Expands Cloud Reach, Ends Microsoft Exclusivity",
       "date": "2026-04-29",
@@ -46,7 +62,7 @@
       ],
       "excerpt": "Google has released Gemma 4, its most capable open-weights model yet \u2014 and for the first time, an open model from a major lab genuinely competes at the frontier.",
       "readTime": "5 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-04-19-gpt5-vs-glm5",
