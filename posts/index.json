@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "slug": "2026-05-01-xai-grok-4-3-launch",
+      "title": "xAI Launches Grok 4.3 with Voice Cloning and Aggressive Pricing",
+      "date": "2026-05-01",
+      "category": "Models",
+      "tags": [
+        "xAI",
+        "Grok",
+        "LLM",
+        "Voice Cloning",
+        "Pricing"
+      ],
+      "excerpt": "xAI has rolled out Grok 4.3, featuring a new voice cloning suite and a competitive pricing strategy. This release targets specialized brilliance and cost efficiency in the LLM market.",
+      "readTime": "2 min",
+      "featured": true
+    },
+    {
       "slug": "2026-04-30-runpod-flash-ai-dev-tool",
       "title": "RunPod Flash: A New Open-Source Tool for Faster AI Development",
       "date": "2026-04-30",
@@ -46,7 +62,7 @@
       ],
       "excerpt": "2026 is the year AI agents stopped being demos. Real companies are now paying AI systems to complete multi-day tasks autonomously \u2014 and the economics are genuinely strange.",
       "readTime": "6 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-04-22-gemma-4-open-frontier",
