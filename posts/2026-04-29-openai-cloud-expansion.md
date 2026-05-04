@@ -5,7 +5,7 @@ category: "Industry"
 tags: ["OpenAI", "Microsoft", "AWS", "Cloud AI", "Partnerships"]
 excerpt: "A landmark shift in cloud AI sees OpenAI models become available beyond Microsoft Azure, as its exclusive partnership with Microsoft is restructured. This move signals a new phase in the cloud wars."
 readTime: "3 min"
-featured: true
+featured: false
 ---
 
 ## OpenAI Models Break Free: A New Era for Cloud AI
