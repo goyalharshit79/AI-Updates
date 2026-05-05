@@ -5,7 +5,7 @@ category: "Tools"
 tags: ["RunPod", "Open-Source", "AI Development", "Orchestration", "Python"]
 excerpt: "RunPod has launched Flash, a new open-source Python tool designed to accelerate AI development by eliminating container overhead. It aims to streamline the AI-first cloud."
 readTime: "2 min"
-featured: true
+featured: false
 ---
 
 ## RunPod Flash Accelerates AI Development by Eliminating Containers

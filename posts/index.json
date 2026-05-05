@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "slug": "2026-05-04-microsoft-agent-365-governance",
+      "title": "Microsoft Agent 365 Exits Preview, Offering Unified AI Governance",
+      "date": "2026-05-04",
+      "category": "Tools",
+      "tags": [
+        "Microsoft",
+        "AI Agents",
+        "Enterprise AI",
+        "Governance",
+        "Security"
+      ],
+      "excerpt": "Microsoft's Agent 365, a unified control plane for managing AI agents across diverse platforms, has moved out of preview. This launch addresses the growing challenge of \"shadow AI\" in enterprises.",
+      "readTime": "2 min",
+      "featured": true
+    },
+    {
       "slug": "2026-05-01-xai-grok-4-3-voice-cloning",
       "title": "xAI Unveils Grok 4.3 with Aggressive Pricing and Advanced Voice Cloning",
       "date": "2026-05-01",
@@ -46,7 +62,7 @@
       ],
       "excerpt": "RunPod has launched Flash, a new open-source Python tool designed to accelerate AI development by eliminating container overhead. It aims to streamline the AI-first cloud.",
       "readTime": "2 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-04-29-openai-cloud-expansion",
