@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "slug": "2026-05-05-subquadratic-subq-efficiency",
+      "title": "Subquadratic Claims 1,000x AI Efficiency Breakthrough with SubQ Model",
+      "date": "2026-05-05",
+      "category": "Models",
+      "tags": [
+        "Subquadratic",
+        "LLM",
+        "Efficiency",
+        "Architecture",
+        "Breakthrough"
+      ],
+      "excerpt": "A Miami-based startup has emerged from stealth, claiming a revolutionary AI model that breaks free from long-standing mathematical constraints, promising unprecedented efficiency gains.",
+      "readTime": "2 min",
+      "featured": true
+    },
+    {
       "slug": "2026-05-04-microsoft-agent-365-governance",
       "title": "Microsoft Agent 365 Exits Preview, Offering Unified AI Governance",
       "date": "2026-05-04",
@@ -46,7 +62,7 @@
       ],
       "excerpt": "xAI has rolled out Grok 4.3, featuring a new voice cloning suite and a competitive pricing strategy. This release targets specialized brilliance and cost efficiency in the LLM market.",
       "readTime": "2 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-04-30-runpod-flash-ai-dev-tool",

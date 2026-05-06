@@ -5,7 +5,7 @@ category: "Models"
 tags: ["xAI", "Grok", "LLM", "Voice Cloning", "Pricing"]
 excerpt: "xAI has rolled out Grok 4.3, featuring a new voice cloning suite and a competitive pricing strategy. This release targets specialized brilliance and cost efficiency in the LLM market."
 readTime: "2 min"
-featured: true
+featured: false
 ---
 
 ## xAI's Grok 4.3 Arrives with Voice Cloning and Aggressive Pricing
