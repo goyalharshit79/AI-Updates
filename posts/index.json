@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "slug": "2026-05-06-hugging-face-robot-app-store",
+      "title": "Hugging Face Unveils Open-Source App Store for Robotics",
+      "date": "2026-05-06",
+      "category": "Tools",
+      "tags": [
+        "Hugging Face",
+        "Robotics",
+        "Open Source",
+        "App Store",
+        "Reachy Mini"
+      ],
+      "excerpt": "Hugging Face launched the Reachy Mini App Store, an open-source platform with over 200 community-built apps for robots. It democratizes robotics development, accelerating innovation.",
+      "readTime": "3 min",
+      "featured": true
+    },
+    {
       "slug": "2026-05-05-subquadratic-subq-efficiency",
       "title": "Subquadratic Claims 1,000x AI Efficiency Breakthrough with SubQ Model",
       "date": "2026-05-05",
@@ -46,7 +62,7 @@
       ],
       "excerpt": "xAI has launched Grok 4.3, introducing a powerful voice cloning suite and an aggressively low price point. This release signals a strategic shift in the competitive AI model market.",
       "readTime": "2 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-05-01-xai-grok-4-3-launch",
