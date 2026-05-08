@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Pulse</title>
+    <link>https://goyalharshit79.github.io/AI-Updates/</link>
+    <atom:link href="https://goyalharshit79.github.io/AI-Updates/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Daily AI intelligence: model releases, tools, research, industry news.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 May 2026 11:32:44 +0000</lastBuildDate>
+    <item>
+      <title>ZAYA1-8B: New Open Reasoning Model Trained on AMD Instinct GPUs</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-07-zaya1-8b-open-reasoning-model</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-07-zaya1-8b-open-reasoning-model</guid>
+      <pubDate>Thu, 07 May 2026 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>A new 1.8 billion-parameter open reasoning model, ZAYA1-8B, has been released, showcasing efficient performance and a significant shift in AI hardware utilization.</description>
+    </item>
+    <item>
+      <title>Hugging Face Unveils Open-Source App Store for Robotics</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-06-hugging-face-robot-app-store</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-06-hugging-face-robot-app-store</guid>
+      <pubDate>Wed, 06 May 2026 00:00:00 +0000</pubDate>
+      <category>Tools</category>
+      <description>Hugging Face launched the Reachy Mini App Store, an open-source platform with over 200 community-built apps for robots. It democratizes robotics development, accelerating innovation.</description>
+    </item>
+    <item>
+      <title>Subquadratic Claims 1,000x AI Efficiency Breakthrough with SubQ Model</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-05-subquadratic-subq-efficiency</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-05-subquadratic-subq-efficiency</guid>
+      <pubDate>Tue, 05 May 2026 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>A Miami-based startup has emerged from stealth, claiming a revolutionary AI model that breaks free from long-standing mathematical constraints, promising unprecedented efficiency gains.</description>
+    </item>
+    <item>
+      <title>Microsoft Agent 365 Exits Preview, Offering Unified AI Governance</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-04-microsoft-agent-365-governance</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-04-microsoft-agent-365-governance</guid>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <category>Tools</category>
+      <description>Microsoft&#x27;s Agent 365, a unified control plane for managing AI agents across diverse platforms, has moved out of preview. This launch addresses the growing challenge of &quot;shadow AI&quot; in enterprises.</description>
+    </item>
+    <item>
+      <title>xAI Unveils Grok 4.3 with Aggressive Pricing and Advanced Voice Cloning</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-01-xai-grok-4-3-voice-cloning</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-01-xai-grok-4-3-voice-cloning</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>xAI has launched Grok 4.3, introducing a powerful voice cloning suite and an aggressively low price point. This release signals a strategic shift in the competitive AI model market.</description>
+    </item>
+    <item>
+      <title>xAI Launches Grok 4.3 with Voice Cloning and Aggressive Pricing</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-01-xai-grok-4-3-launch</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-05-01-xai-grok-4-3-launch</guid>
+      <pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>xAI has rolled out Grok 4.3, featuring a new voice cloning suite and a competitive pricing strategy. This release targets specialized brilliance and cost efficiency in the LLM market.</description>
+    </item>
+    <item>
+      <title>RunPod Flash: A New Open-Source Tool for Faster AI Development</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-30-runpod-flash-ai-dev-tool</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-30-runpod-flash-ai-dev-tool</guid>
+      <pubDate>Thu, 30 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Tools</category>
+      <description>RunPod has launched Flash, a new open-source Python tool designed to accelerate AI development by eliminating container overhead. It aims to streamline the AI-first cloud.</description>
+    </item>
+    <item>
+      <title>OpenAI Expands Cloud Reach, Ends Microsoft Exclusivity</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-29-openai-cloud-expansion</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-29-openai-cloud-expansion</guid>
+      <pubDate>Wed, 29 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>A landmark shift in cloud AI sees OpenAI models become available beyond Microsoft Azure, as its exclusive partnership with Microsoft is restructured. This move signals a new phase in the cloud wars.</description>
+    </item>
+    <item>
+      <title>The Agent Economy: When AI Stops Answering and Starts Working</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-28-ai-agent-economy</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-28-ai-agent-economy</guid>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Industry</category>
+      <description>2026 is the year AI agents stopped being demos. Real companies are now paying AI systems to complete multi-day tasks autonomously — and the economics are genuinely strange.</description>
+    </item>
+    <item>
+      <title>Google&#x27;s Gemma 4: Open Weights Finally Reach the Frontier</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-22-gemma-4-open-frontier</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-22-gemma-4-open-frontier</guid>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>Google has released Gemma 4, its most capable open-weights model yet — and for the first time, an open model from a major lab genuinely competes at the frontier.</description>
+    </item>
+    <item>
+      <title>GPT-5.4 vs. GLM-5.1: The Battle for Coding Supremacy</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-19-gpt5-vs-glm5</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-19-gpt5-vs-glm5</guid>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>OpenAI&#x27;s latest GPT-5.4 release faces an unexpected challenger: Zhipu AI&#x27;s GLM-5.1, which has officially overtaken it in key coding benchmarks.</description>
+    </item>
+    <item>
+      <title>Claude Mythos: Anthropic’s Most Powerful Model (With a Catch)</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-12-claude-mythos-launch</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-12-claude-mythos-launch</guid>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>Anthropic has confirmed Claude Mythos, a model so powerful it is currently locked behind a 50-company firewall.</description>
+    </item>
+    <item>
+      <title>OpenClaw v2026.4.9: Dreaming REM and Diary UI Overhaul</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-09-openclaw-rem-update</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-04-09-openclaw-rem-update</guid>
+      <pubDate>Thu, 09 Apr 2026 00:00:00 +0000</pubDate>
+      <category>Tools</category>
+      <description>The latest OpenClaw release introduces ‘Dreaming’ capabilities with REM backfill and a significant security hardening overhaul.</description>
+    </item>
+    <item>
+      <title>The March 2026 AI Surge: 12 Models in 7 Days</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-03-31-march-ai-surge</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2026-03-31-march-ai-surge</guid>
+      <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+      <category>News</category>
+      <description>March 2026 went down in history as the month that changed AI forever, with a record-breaking 12 model releases in a single week.</description>
+    </item>
+    <item>
+      <title>Vibe Coding: How AI Rewired the Way We Write Software</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-07-15-vibe-coding-revolution</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-07-15-vibe-coding-revolution</guid>
+      <pubDate>Tue, 15 Jul 2025 00:00:00 +0000</pubDate>
+      <category>Tools</category>
+      <description>From Cursor to Claude Code to GitHub Copilot — the craft of software development fundamentally changed in 2025. Here&#x27;s what vibe coding really means and where it&#x27;s heading.</description>
+    </item>
+    <item>
+      <title>Claude 4 Unveiled: Anthropic&#x27;s Most Powerful Model Family</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-06-10-claude-4-anthropic</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-06-10-claude-4-anthropic</guid>
+      <pubDate>Tue, 10 Jun 2025 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>Anthropic launches Claude 4 with Opus 4, Sonnet 4, and Haiku 4 — pushing the frontier of reasoning, coding, and multimodal capabilities to new heights.</description>
+    </item>
+    <item>
+      <title>OpenAI&#x27;s o3: The Reasoning Model That Changes Everything</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-05-20-openai-o3-reasoning</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-05-20-openai-o3-reasoning</guid>
+      <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>OpenAI&#x27;s o3 achieves near-human performance on scientific and math benchmarks, making the AI safety community rethink timelines — and raising urgent questions about what comes next.</description>
+    </item>
+    <item>
+      <title>Gemini 2.0 Ultra: Google&#x27;s Multimodal Masterstroke</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-04-08-gemini-2-ultra</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-04-08-gemini-2-ultra</guid>
+      <pubDate>Tue, 08 Apr 2025 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>Google&#x27;s Gemini 2.0 Ultra brings native audio, video, and code understanding together in a single frontier model, challenging every benchmark GPT-4o and Claude hold.</description>
+    </item>
+    <item>
+      <title>Meta Releases Llama 4: Open Source Reaches the Frontier</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-03-14-meta-llama-4</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-03-14-meta-llama-4</guid>
+      <pubDate>Fri, 14 Mar 2025 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>Meta&#x27;s Llama 4 family brings open-weight models to frontier performance levels, reshaping what&#x27;s possible for developers building on local and self-hosted AI.</description>
+    </item>
+    <item>
+      <title>DeepSeek R1: The Chinese AI That Shocked Silicon Valley</title>
+      <link>https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-01-20-deepseek-disrupts-ai</link>
+      <guid isPermaLink="true">https://goyalharshit79.github.io/AI-Updates/post.html?slug=2025-01-20-deepseek-disrupts-ai</guid>
+      <pubDate>Mon, 20 Jan 2025 00:00:00 +0000</pubDate>
+      <category>Models</category>
+      <description>DeepSeek&#x27;s R1 model matched GPT-4 performance at a fraction of the cost, triggering a rethink of AI economics and a historic stock market selloff.</description>
+    </item>
+  </channel>
+</rss>

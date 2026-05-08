@@ -177,13 +177,24 @@ async function loadAffiliates() {
       const el = document.getElementById(elId);
       if (!el) return;
       el.innerHTML = items.map(a => `
-        <a href="${a.url}" target="_blank" rel="noopener noreferrer" class="aff-card">
+        <a href="${a.url}" target="_blank" rel="sponsored nofollow noopener noreferrer" class="aff-card" data-aff-id="${a.id}">
           <div class="aff-icon" style="background:${a.bg || 'rgba(139,92,246,.15)'}">${a.icon}</div>
           <div>
             <div class="aff-name">${a.name}</div>
             <div class="aff-desc">${a.description}</div>
           </div>
         </a>`).join('');
+      el.querySelectorAll('a[data-aff-id]').forEach(a => {
+        a.addEventListener('click', () => {
+          if (typeof gtag === 'function') {
+            gtag('event', 'affiliate_click', {
+              event_category: 'engagement',
+              event_label: a.dataset.affId,
+              transport_type: 'beacon'
+            });
+          }
+        });
+      });
     };
 
     renderSection(tools, 'affTools');

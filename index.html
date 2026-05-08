@@ -3,18 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Pulse — The Future of AI, Delivered Daily</title>
-  <meta name="description" content="Your daily intelligence briefing on AI breakthroughs, model releases, tools, and industry news. Automated and curated." />
-  <meta property="og:title" content="AI Pulse — The Future of AI, Delivered Daily" />
-  <meta property="og:description" content="Your daily intelligence briefing on AI breakthroughs, model releases, tools, and industry news." />
+  <title>AI Pulse — Daily AI News, Model Releases & Tool Reviews</title>
+  <meta name="description" content="Daily AI intelligence briefing: new model releases, AI tool reviews, research breakthroughs, and industry news. Curated and updated every day." />
+  <meta name="keywords" content="AI news, AI tools, LLM, GPT, Claude, Gemini, machine learning, AI updates, AI blog" />
+  <meta name="author" content="AI Pulse" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="canonical" href="https://goyalharshit79.github.io/AI-Updates/" />
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="AI Pulse" />
+  <meta property="og:title" content="AI Pulse — Daily AI News, Model Releases & Tool Reviews" />
+  <meta property="og:description" content="Daily AI intelligence briefing: model releases, tool reviews, research, and industry news." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://goyalharshit79.github.io/AI-Updates/" />
+  <meta property="og:image" content="https://goyalharshit79.github.io/AI-Updates/assets/og-default.png" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Pulse — Daily AI News" />
+  <meta name="twitter:description" content="Daily AI intelligence briefing: model releases, tool reviews, research, and industry news." />
+  <meta name="twitter:image" content="https://goyalharshit79.github.io/AI-Updates/assets/og-default.png" />
+
   <meta name="theme-color" content="#8b5cf6" />
+  <link rel="alternate" type="application/rss+xml" title="AI Pulse RSS" href="/AI-Updates/feed.xml" />
+  <link rel="sitemap" type="application/xml" href="/AI-Updates/sitemap.xml" />
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "AI Pulse",
+    "url": "https://goyalharshit79.github.io/AI-Updates/",
+    "description": "Daily AI intelligence briefing: model releases, tool reviews, research, and industry news.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://goyalharshit79.github.io/AI-Updates/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your real measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
 </head>
 <body>
+
+<!-- ══ AFFILIATE DISCLOSURE BANNER (FTC) ══ -->
+<div class="disclosure-banner" role="note">
+  Some links on this site are affiliate links — we may earn a commission at no extra cost to you. <a href="disclosure.html">Learn more</a>.
+</div>
 
 <canvas id="neural-canvas"></canvas>
 
@@ -114,6 +164,17 @@
       <div style="height:210px;border-radius:10px" class="skeleton"></div>
     </div>
     <button class="btn-load" id="loadMore" style="display:none">Load more updates</button>
+
+    <!-- ══ NEWSLETTER ══ -->
+    <section class="newsletter-box" aria-labelledby="newsletter-h">
+      <h2 id="newsletter-h" class="newsletter-title">The AI Pulse Briefing</h2>
+      <p class="newsletter-sub">Get the day's most important AI news in your inbox. No spam, unsubscribe anytime.</p>
+      <form class="newsletter-form" id="newsletterForm" action="https://buttondown.com/api/emails/embed-subscribe/REPLACE_ME" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.com/REPLACE_ME', 'popupwindow')">
+        <input type="email" name="email" placeholder="you@domain.com" required aria-label="Email address" />
+        <button type="submit">Subscribe →</button>
+      </form>
+      <p class="newsletter-foot">Join readers tracking the future of AI.</p>
+    </section>
   </div>
 
   <!-- Sidebar -->
@@ -170,9 +231,10 @@
       <div id="about">
         <p class="foot-h">About</p>
         <ul class="foot-links">
-          <li><a href="#">About AI Pulse</a></li>
-          <li><a href="#">Affiliate Disclosure</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="about.html">About AI Pulse</a></li>
+          <li><a href="disclosure.html">Affiliate Disclosure</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="feed.xml">RSS Feed</a></li>
         </ul>
       </div>
     </div>

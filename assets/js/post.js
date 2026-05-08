@@ -51,6 +51,55 @@ const fmtDate = d => new Date(d).toLocaleDateString('en-US', { year: 'numeric', 
 const catClass = c => ({ Models: 'cat-models', Tools: 'cat-tools', Research: 'cat-research', Industry: 'cat-industry', News: 'cat-news' }[c] || 'cat-news');
 const getSlug = () => new URLSearchParams(location.search).get('slug');
 
+const SITE_URL = 'https://goyalharshit79.github.io/AI-Updates';
+
+// Domains we treat as affiliate links — outbound links to these get rel="sponsored nofollow"
+// and click tracking. Add new partner domains here as you sign up.
+const AFFILIATE_DOMAINS = [
+  'jasper.ai', 'copy.ai', 'writesonic.com', 'rytr.me',
+  'elevenlabs.io', 'notion.so', 'clickup.com', 'perplexity.ai',
+  'leonardo.ai', 'ideogram.ai', 'heygen.com', 'synthesia.io',
+  'descript.com', 'getresponse.com', 'systeme.io',
+  'cursor.sh', 'cursor.com', 'amazon.com', 'amzn.to',
+  'udemy.com', 'coursera.org', 'impact.com', 'partnerstack.com',
+  'shareasale.com', 'cj.com', 'anthropic.com', 'openai.com',
+  'midjourney.com', 'github.com'
+];
+
+function isAffiliateUrl(url) {
+  try {
+    const host = new URL(url, location.href).hostname.replace(/^www\./, '');
+    return AFFILIATE_DOMAINS.some(d => host === d || host.endsWith('.' + d));
+  } catch { return false; }
+}
+
+function annotateAffiliateLinks(rootEl) {
+  if (!rootEl) return;
+  rootEl.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href.startsWith('#') || href.startsWith('/') || href.startsWith('post.html') || href.startsWith('index.html')) return;
+    if (!/^https?:\/\//i.test(href)) return;
+    const external = !href.includes(location.hostname);
+    if (external) {
+      a.setAttribute('target', '_blank');
+      const existingRel = (a.getAttribute('rel') || '').split(/\s+/).filter(Boolean);
+      const needed = ['noopener', 'noreferrer'];
+      if (isAffiliateUrl(href)) needed.push('sponsored', 'nofollow');
+      needed.forEach(r => { if (!existingRel.includes(r)) existingRel.push(r); });
+      a.setAttribute('rel', existingRel.join(' '));
+      a.addEventListener('click', () => {
+        if (typeof gtag === 'function') {
+          gtag('event', isAffiliateUrl(href) ? 'affiliate_click' : 'outbound_click', {
+            event_category: 'engagement',
+            event_label: href,
+            transport_type: 'beacon'
+          });
+        }
+      });
+    }
+  });
+}
+
 /* ─── Parse YAML-ish frontmatter ─────────────── */
 function parseFrontmatter(raw) {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
@@ -137,10 +186,45 @@ async function init() {
         </div>`;
     }
 
-    // Update page meta
-    document.title = `${meta.title || slug} — AI Pulse`;
-    const descEl = document.querySelector('meta[name="description"]');
-    if (descEl) descEl.setAttribute('content', meta.excerpt || '');
+    // Update page meta — title, description, OG, Twitter, canonical, JSON-LD
+    const title = meta.title || slug;
+    const desc = meta.excerpt || '';
+    const url = `${SITE_URL}/post.html?slug=${slug}`;
+    const ogImage = `${SITE_URL}/assets/og-default.png`;
+
+    document.title = `${title} — AI Pulse`;
+    const setAttr = (sel, attr, val) => { const el = document.querySelector(sel); if (el) el.setAttribute(attr, val); };
+    setAttr('meta[name="description"]', 'content', desc);
+    setAttr('#canonicalTag', 'href', url);
+    setAttr('#ogTitle', 'content', title);
+    setAttr('#ogDesc', 'content', desc);
+    setAttr('#ogUrl', 'content', url);
+    setAttr('#ogImage', 'content', ogImage);
+    setAttr('#twTitle', 'content', title);
+    setAttr('#twDesc', 'content', desc);
+    setAttr('#twImage', 'content', ogImage);
+
+    const schemaEl = document.getElementById('articleSchema');
+    if (schemaEl) {
+      schemaEl.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: title,
+        description: desc,
+        image: ogImage,
+        datePublished: meta.date || '',
+        dateModified: meta.date || '',
+        author: { '@type': 'Organization', name: 'AI Pulse' },
+        publisher: {
+          '@type': 'Organization',
+          name: 'AI Pulse',
+          logo: { '@type': 'ImageObject', url: `${SITE_URL}/assets/og-default.png` }
+        },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+        keywords: Array.isArray(meta.tags) ? meta.tags.join(', ') : (meta.tags || ''),
+        articleSection: meta.category || 'News'
+      });
+    }
 
     // Render markdown
     const content = document.getElementById('postContent');
@@ -148,14 +232,24 @@ async function init() {
       marked.setOptions({ breaks: true, gfm: true });
       content.innerHTML = marked.parse(body);
       buildTOC(content);
+      annotateAffiliateLinks(content);
     }
 
-    // Related posts (same category, shuffled)
+    // Related posts: tag overlap first, then category fallback
     const all = manifest.posts || [];
-    const related = all
-      .filter(p => p.slug !== slug && p.category === (meta.category || ''))
-      .sort(() => Math.random() - .5)
-      .slice(0, 3);
+    const myTags = new Set((Array.isArray(meta.tags) ? meta.tags : []).map(t => t.toLowerCase()));
+    const scored = all
+      .filter(p => p.slug !== slug)
+      .map(p => {
+        const t = (p.tags || []).filter(x => myTags.has(x.toLowerCase())).length;
+        const c = p.category === (meta.category || '') ? 1 : 0;
+        return { p, score: t * 3 + c };
+      })
+      .filter(x => x.score > 0)
+      .sort((a, b) => b.score - a.score || new Date(b.p.date) - new Date(a.p.date));
+    const related = (scored.length ? scored.map(x => x.p) :
+      all.filter(p => p.slug !== slug).sort((a, b) => new Date(b.date) - new Date(a.date))
+    ).slice(0, 3);
 
     if (related.length) {
       const sec = document.getElementById('relatedSection');

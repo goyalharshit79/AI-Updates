@@ -1,4 +1,5 @@
 {
+  "_note": "Replace PLACEHOLDER URLs with your real affiliate links once approved. Apply for: Impact.com, PartnerStack, ShareASale, Amazon Associates. Many AI SaaS programs (Jasper, ElevenLabs, Notion, Descript, etc.) live on Impact or PartnerStack.",
   "affiliates": [
     {
       "id": "claude-pro",
@@ -46,6 +47,69 @@
       "category": "Tools"
     },
     {
+      "id": "jasper",
+      "name": "Jasper AI",
+      "description": "AI writing assistant for marketing teams",
+      "url": "PLACEHOLDER_JASPER_IMPACT_URL",
+      "icon": "✍️",
+      "bg": "rgba(245,158,11,0.12)",
+      "category": "Tools"
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "description": "Hyper-realistic AI voice generation",
+      "url": "PLACEHOLDER_ELEVENLABS_AFFILIATE_URL",
+      "icon": "🎙️",
+      "bg": "rgba(168,85,247,0.12)",
+      "category": "Tools"
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity Pro",
+      "description": "AI-powered answer engine with citations",
+      "url": "PLACEHOLDER_PERPLEXITY_AFFILIATE_URL",
+      "icon": "🔍",
+      "bg": "rgba(34,211,238,0.12)",
+      "category": "Tools"
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "description": "AI built into your workspace",
+      "url": "PLACEHOLDER_NOTION_PARTNERSTACK_URL",
+      "icon": "📝",
+      "bg": "rgba(139,92,246,0.12)",
+      "category": "Tools"
+    },
+    {
+      "id": "descript",
+      "name": "Descript",
+      "description": "Edit video & audio like a doc — with AI",
+      "url": "PLACEHOLDER_DESCRIPT_PARTNERSTACK_URL",
+      "icon": "🎬",
+      "bg": "rgba(236,72,153,0.12)",
+      "category": "Tools"
+    },
+    {
+      "id": "heygen",
+      "name": "HeyGen",
+      "description": "AI video avatars & translation",
+      "url": "PLACEHOLDER_HEYGEN_AFFILIATE_URL",
+      "icon": "🎥",
+      "bg": "rgba(16,185,129,0.12)",
+      "category": "Tools"
+    },
+    {
+      "id": "leonardo",
+      "name": "Leonardo.ai",
+      "description": "Production-grade AI image generation",
+      "url": "PLACEHOLDER_LEONARDO_AFFILIATE_URL",
+      "icon": "🖼️",
+      "bg": "rgba(168,85,247,0.12)",
+      "category": "Tools"
+    },
+    {
       "id": "udemy-ai",
       "name": "Udemy AI Courses",
       "description": "Top-rated AI & ML courses — up to 90% off",
@@ -61,6 +125,15 @@
       "url": "PLACEHOLDER_COURSERA_AFFILIATE_URL",
       "icon": "🏛️",
       "bg": "rgba(16,185,129,0.12)",
+      "category": "Courses"
+    },
+    {
+      "id": "deeplearning-ai",
+      "name": "DeepLearning.AI",
+      "description": "Andrew Ng's flagship AI courses",
+      "url": "PLACEHOLDER_DEEPLEARNING_AFFILIATE_URL",
+      "icon": "🧠",
+      "bg": "rgba(139,92,246,0.12)",
       "category": "Courses"
     },
     {
