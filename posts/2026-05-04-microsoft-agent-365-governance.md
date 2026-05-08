@@ -5,7 +5,7 @@ category: "Tools"
 tags: ["Microsoft", "AI Agents", "Enterprise AI", "Governance", "Security"]
 excerpt: "Microsoft's Agent 365, a unified control plane for managing AI agents across diverse platforms, has moved out of preview. This launch addresses the growing challenge of "shadow AI" in enterprises."
 readTime: "2 min"
-featured: true
+featured: false
 ---
 
 ## Microsoft Agent 365: A New Era for Enterprise AI Governance

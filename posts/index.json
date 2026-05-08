@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "slug": "2026-05-07-zaya1-8b-open-reasoning-model",
+      "title": "ZAYA1-8B: New Open Reasoning Model Trained on AMD Instinct GPUs",
+      "date": "2026-05-07",
+      "category": "Models",
+      "tags": [
+        "AMD",
+        "Open Source",
+        "Reasoning",
+        "LLM",
+        "MI300"
+      ],
+      "excerpt": "A new 1.8 billion-parameter open reasoning model, ZAYA1-8B, has been released, showcasing efficient performance and a significant shift in AI hardware utilization.",
+      "readTime": "2 min",
+      "featured": true
+    },
+    {
       "slug": "2026-05-06-hugging-face-robot-app-store",
       "title": "Hugging Face Unveils Open-Source App Store for Robotics",
       "date": "2026-05-06",
@@ -46,7 +62,7 @@
       ],
       "excerpt": "Microsoft's Agent 365, a unified control plane for managing AI agents across diverse platforms, has moved out of preview. This launch addresses the growing challenge of \"shadow AI\" in enterprises.",
       "readTime": "2 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-05-01-xai-grok-4-3-voice-cloning",
