@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://goyalharshit79.github.io/AI-Updates/sitemap.xml
