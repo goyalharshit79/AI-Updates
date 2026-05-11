@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "slug": "2026-05-08-openai-real-time-voice-gpt5-reasoning",
+      "title": "OpenAI Enhances Real-Time Voice with GPT-5 Class Reasoning",
+      "date": "2026-05-08",
+      "category": "Models",
+      "tags": [
+        "OpenAI",
+        "Voice AI",
+        "GPT-5",
+        "Real-time",
+        "Reasoning"
+      ],
+      "excerpt": "OpenAI integrates \"GPT-5 class reasoning\" into real-time voice models, enabling highly sophisticated and responsive AI voice agents. This redefines enterprise voice agent architecture.",
+      "readTime": "2 min",
+      "featured": true
+    },
+    {
       "slug": "2026-05-07-zaya1-8b-open-reasoning-model",
       "title": "ZAYA1-8B: New Open Reasoning Model Trained on AMD Instinct GPUs",
       "date": "2026-05-07",
@@ -46,7 +62,7 @@
       ],
       "excerpt": "A Miami-based startup has emerged from stealth, claiming a revolutionary AI model that breaks free from long-standing mathematical constraints, promising unprecedented efficiency gains.",
       "readTime": "2 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-05-04-microsoft-agent-365-governance",

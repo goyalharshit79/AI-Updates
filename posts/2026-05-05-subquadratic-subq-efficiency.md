@@ -5,7 +5,7 @@ category: "Models"
 tags: ["Subquadratic", "LLM", "Efficiency", "Architecture", "Breakthrough"]
 excerpt: "A Miami-based startup has emerged from stealth, claiming a revolutionary AI model that breaks free from long-standing mathematical constraints, promising unprecedented efficiency gains."
 readTime: "2 min"
-featured: true
+featured: false
 ---
 
 ## A New Era of AI Efficiency?
