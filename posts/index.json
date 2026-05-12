@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "slug": "2026-05-11-openai-daybreak-security-ai",
+      "title": "OpenAI Unveils Daybreak, a New Security-Focused AI System",
+      "date": "2026-05-11",
+      "category": "Models",
+      "tags": [
+        "OpenAI",
+        "Security",
+        "GPT",
+        "AI Systems",
+        "Cybersecurity"
+      ],
+      "excerpt": "OpenAI has launched Daybreak, a new AI system combining advanced models to tackle cybersecurity challenges. This release marks a significant step in AI-powered defense.",
+      "readTime": "3 min",
+      "featured": true
+    },
+    {
       "slug": "2026-05-08-openai-real-time-voice-gpt5-reasoning",
       "title": "OpenAI Enhances Real-Time Voice with GPT-5 Class Reasoning",
       "date": "2026-05-08",
@@ -46,7 +62,7 @@
       ],
       "excerpt": "Hugging Face launched the Reachy Mini App Store, an open-source platform with over 200 community-built apps for robots. It democratizes robotics development, accelerating innovation.",
       "readTime": "3 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-05-05-subquadratic-subq-efficiency",

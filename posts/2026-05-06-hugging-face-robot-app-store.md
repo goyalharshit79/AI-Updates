@@ -5,7 +5,7 @@ category: "Tools"
 tags: ["Hugging Face", "Robotics", "Open Source", "App Store", "Reachy Mini"]
 excerpt: "Hugging Face launched the Reachy Mini App Store, an open-source platform with over 200 community-built apps for robots. It democratizes robotics development, accelerating innovation."
 readTime: "3 min"
-featured: true
+featured: false
 ---
 
 ## Hugging Face Opens the Door to Robot App Development
