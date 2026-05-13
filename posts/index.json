@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "slug": "2026-05-12-perceptron-mk1-video-ai",
+      "title": "Perceptron MK1 Disrupts Video AI with Unprecedented Cost-Efficiency",
+      "date": "2026-05-12",
+      "category": "Models",
+      "tags": [
+        "Video AI",
+        "Perceptron MK1",
+        "Cost-Efficiency",
+        "Computer Vision",
+        "Benchmarks"
+      ],
+      "excerpt": "A new AI model, Perceptron MK1, is making waves in video analysis, claiming highly performant capabilities at a fraction of the cost of current market leaders.",
+      "readTime": "2 min",
+      "featured": true
+    },
+    {
       "slug": "2026-05-11-openai-daybreak-security-ai",
       "title": "OpenAI Unveils Daybreak, a New Security-Focused AI System",
       "date": "2026-05-11",
@@ -46,7 +62,7 @@
       ],
       "excerpt": "A new 1.8 billion-parameter open reasoning model, ZAYA1-8B, has been released, showcasing efficient performance and a significant shift in AI hardware utilization.",
       "readTime": "2 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-05-06-hugging-face-robot-app-store",

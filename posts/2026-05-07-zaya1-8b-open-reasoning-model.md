@@ -5,7 +5,7 @@ category: "Models"
 tags: ["AMD", "Open Source", "Reasoning", "LLM", "MI300"]
 excerpt: "A new 1.8 billion-parameter open reasoning model, ZAYA1-8B, has been released, showcasing efficient performance and a significant shift in AI hardware utilization."
 readTime: "2 min"
-featured: true
+featured: false
 ---
 
 ## ZAYA1-8B Emerges, Powering Reasoning on AMD Hardware
