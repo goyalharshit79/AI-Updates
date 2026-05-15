@@ -1,6 +1,22 @@
 {
   "posts": [
     {
+      "slug": "2026-05-14-cerebras-ipo-100-billion",
+      "title": "Cerebras IPO Soars to $100 Billion Valuation on Day One",
+      "date": "2026-05-14",
+      "category": "Industry",
+      "tags": [
+        "Cerebras",
+        "AI Chips",
+        "IPO",
+        "Investment",
+        "Infrastructure"
+      ],
+      "excerpt": "AI chipmaker Cerebras made a stunning public debut, reaching a $100 billion valuation and raising billions in the largest US tech IPO since 2019.",
+      "readTime": "3 min",
+      "featured": true
+    },
+    {
       "slug": "2026-05-12-perceptron-mk1-video-ai",
       "title": "Perceptron MK1 Disrupts Video AI with Unprecedented Cost-Efficiency",
       "date": "2026-05-12",
@@ -46,7 +62,7 @@
       ],
       "excerpt": "OpenAI integrates \"GPT-5 class reasoning\" into real-time voice models, enabling highly sophisticated and responsive AI voice agents. This redefines enterprise voice agent architecture.",
       "readTime": "2 min",
-      "featured": true
+      "featured": false
     },
     {
       "slug": "2026-05-07-zaya1-8b-open-reasoning-model",

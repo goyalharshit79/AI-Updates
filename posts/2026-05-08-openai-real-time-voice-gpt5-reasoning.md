@@ -5,7 +5,7 @@ category: "Models"
 tags: ["OpenAI", "Voice AI", "GPT-5", "Real-time", "Reasoning"]
 excerpt: "OpenAI integrates "GPT-5 class reasoning" into real-time voice models, enabling highly sophisticated and responsive AI voice agents. This redefines enterprise voice agent architecture."
 readTime: "2 min"
-featured: true
+featured: false
 ---
 
 ## OpenAI Elevates Real-Time Voice with GPT-5 Class Reasoning
